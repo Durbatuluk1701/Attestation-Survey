@@ -491,7 +491,7 @@ along with an accompanying verified Attestation Manager (\citet{copland-avm-gith
 Attestation DSL's allow for specific Attestation Service Providers (ASPs) to represent a measurement of a
 specific property.
 
-\citet{Petz::2021::DesignProtocol} design and verify a Attestation Virtual Machine, as a running executable which can consume Attestation Requests in the form of Copland protocols.
+\citet{petz2022innovations} design and verify a Attestation Virtual Machine, as a running executable which can consume Attestation Requests in the form of Copland protocols.
 
 Further, they demonstrate how the assumptions necessary for securely gathered attestation evidence
 via an Attestation Manager or Virtual Machine can be satisfied with a strict process isolation mechanism, such as the seL4 microkernel (\citet{Klein:09:seL4:-formal-ve}).
@@ -613,7 +613,13 @@ utilizing a protocol ordering.
 the concept of validating layered attestation protocols based upon an
 analaysis with a model checker. This model checker would simulate
 adversary actions, and give possible attacks based upon the protocol.
-It was further extended upon by \citet{rowe2021orderings,Rowe:2016wb} where
+Further work was done by \citet{Petz::2021::DesignProtocol} 
+utilizing these tools in conjunction with the Flexibles Mechanisms
+for Remote Attestation \cite{helble2021flexible} to show the specific
+desired properties of an attestation protocol itself could be verified
+with model checking.
+
+Protocol ordering was extended upon by \citet{rowe2021orderings,Rowe:2016wb} where
 the key insight that attack tree on protocols could be ordered
 based upon homomorphisms between attack graphs\footnote{Generally a homomorphism from attack tree A to B meant that attack A was more easily completed than attack B}.
 Utilizing protocol orderings lends to upholding the original Principle of ``Trustworthy Mechanism'', but also adds another layer of analysis to attestation.
